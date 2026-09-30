@@ -782,3 +782,70 @@ footer {
 .map-wrapper:hover iframe {
   filter: grayscale(0%) contrast(1)
 }
+
+/* Consistent tablet/mobile page padding */
+@media (max-width: 991.98px){
+  .container,
+  .container-fluid,
+  .section-inner,
+  .content-wrap,
+  .page-section,
+  .hero-content,
+  .footer-inner{
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+  .row{
+    --bs-gutter-x: 1.5rem;
+  }
+}
+@media (max-width: 767.98px){
+  .container,
+  .container-fluid,
+  .section-inner,
+  .content-wrap,
+  .page-section,
+  .hero-content,
+  .footer-inner{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 991.98px){
+  .mobile-tablet-fixed{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1050;
+  }
+  body{ padding-top: 0; }
+}
+
+/* Final correction pass: consistent responsive spacing and controls */
+.footer-brand{display:inline-flex;flex-direction:column;align-items:flex-start}
+.footer-brand small{display:block;font-family:var(--sans);font-size:.48rem;letter-spacing:.25em;font-weight:600;margin-top:8px;color:#e3c493}
+.footer a{transition:color .25s ease,opacity .25s ease}
+.footer a:hover{color:#fff;opacity:1}
+.contact-form .btn-wedding, form .btn-wedding{width:100%;min-height:52px}
+.gallery-hero .container{text-align:left}
+.gallery-hero h1{margin-left:0;margin-right:0}
+@media (max-width:991.98px){
+  .navbar{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:1050;background:rgba(35,28,25,.97)!important;padding:15px 0!important}
+  body{padding-top:0}
+  .container{padding-left:32px!important;padding-right:32px!important}
+  .section,.page-hero,.hero-content{padding-left:0;padding-right:0}
+  .hero .container{padding-left:32px!important;padding-right:32px!important}
+  .btn-wedding{width:100%;max-width:100%}
+}
+@media (max-width:767.98px){
+  .container{padding-left:20px!important;padding-right:20px!important}
+  .hero .container{padding-left:20px!important;padding-right:20px!important}
+  .navbar .container{padding-left:20px!important;padding-right:20px!important}
+  .section{padding-top:70px;padding-bottom:70px}
+  .page-hero{padding-top:145px;padding-bottom:70px}
+  .gallery-hero .container{text-align:left}
+  .btn-wedding{width:100%;min-height:52px}
+}
